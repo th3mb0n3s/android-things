@@ -1,0 +1,209 @@
+admin@planet-terror:~
+$ fastboot oem fb_mode_set
+                                                   OKAY [  0.002s]
+Finished. Total time: 0.002s
+admin@planet-terror:~
+$ fastboot flash partition gpt.bin
+fastboot: error: cannot load 'gpt.bin': No such file or directory
+admin@planet-terror:~
+$ cd Documents/platform-tools
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash partition gpt.bin
+(bootloader) is-logical:partition: not found
+Sending 'partition' (45 KB)                        OKAY [  0.171s]
+Writing 'partition'                                (bootloader) Validating 'gpt.default.xml'
+(bootloader) Committing 'gpt.default.xml'
+(bootloader) - flashing 'gpt_main0.bin' to 'partition:0'
+(bootloader) Flashing primary GPT image...
+(bootloader) Flashing backup GPT image...
+OKAY [  0.081s]
+Finished. Total time: 0.263s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash bootloader bootloader.img
+(bootloader) is-logical:bootloader: not found
+Sending 'bootloader' (7419 KB)                     OKAY [  0.517s]
+Writing 'bootloader'                               (bootloader) Validating 'bootloader.default.xml'
+(bootloader) Committing 'bootloader.default.xml'
+(bootloader) - flashing 'emmc_appsboot.mbn' to 'aboot'
+(bootloader) - flashing 'rpm.mbn' to 'rpm'
+(bootloader) - flashing 'tz.mbn' to 'tz'
+(bootloader) - flashing 'devcfg.mbn' to 'devcfg'
+(bootloader) - flashing 'cmnlib_30.mbn' to 'cmnlib'
+(bootloader) - flashing 'cmnlib64_30.mbn' to 'cmnlib64'
+(bootloader) - flashing 'keymaster64.mbn' to 'keymaster'
+(bootloader) - flashing 'prov.mbn' to 'prov'
+(bootloader) - flashing 'sbl1.mbn' to 'sbl1'
+OKAY [  0.379s]
+Finished. Total time: 0.905s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash modem_a NON-HLOS.bin
+(bootloader) is-logical:modem_a: not found
+Sending 'modem_a' (65428 KB)                       OKAY [  3.207s]
+Writing 'modem_a'                                  OKAY [  1.095s]
+Finished. Total time: 4.329s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash fsg_a fsg.mbn
+(bootloader) is-logical:fsg_a: not found
+Sending 'fsg_a' (9204 KB)                          OKAY [  0.536s]
+Writing 'fsg_a'                                    OKAY [  0.120s]
+Finished. Total time: 0.807s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot erase modemst1
+Erasing 'modemst1'                                 OKAY [  0.018s]
+Finished. Total time: 0.019s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot erase modemst2
+Erasing 'modemst2'                                 OKAY [  0.032s]
+Finished. Total time: 0.032s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash dsp_a adspso.bin
+(bootloader) is-logical:dsp_a: not found
+Sending 'dsp_a' (16384 KB)                         OKAY [  0.933s]
+Writing 'dsp_a'                                    OKAY [  0.174s]
+Finished. Total time: 1.406s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash logo_a logo.bin
+(bootloader) is-logical:logo_a: not found
+Sending 'logo_a' (1285 KB)                         OKAY [  0.228s]
+Writing 'logo_a'                                   OKAY [  0.061s]
+Finished. Total time: 0.291s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash boot_a boot.img
+(bootloader) is-logical:boot_a: not found
+Sending 'boot_a' (32768 KB)                        OKAY [  1.708s]
+Writing 'boot_a'                                   (bootloader) Image signed with key bad key
+OKAY [  0.760s]
+Finished. Total time: 2.942s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash dtbo_a dtbo.img
+(bootloader) is-logical:dtbo_a: not found
+Sending 'dtbo_a' (1760 KB)                         OKAY [  0.250s]
+Writing 'dtbo_a'                                   OKAY [  0.057s]
+Finished. Total time: 0.309s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.0
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (258688 KB)                     OKAY [ 12.224s]
+Writing 'system_a'                                 OKAY [  2.581s]
+Finished. Total time: 14.904s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.1
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (260355 KB)                     OKAY [ 12.295s]
+Writing 'system_a'                                 OKAY [  2.735s]
+Finished. Total time: 15.417s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.2
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (249696 KB)                     OKAY [ 11.799s]
+Writing 'system_a'                                 OKAY [  2.001s]
+Finished. Total time: 13.968s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.3
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (255533 KB)                     OKAY [ 12.121s]
+Writing 'system_a'                                 OKAY [  2.288s]
+Finished. Total time: 14.561s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.4
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (257169 KB)                     OKAY [ 12.169s]
+Writing 'system_a'                                 OKAY [  2.088s]
+Finished. Total time: 14.410s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.5
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (257969 KB)                     OKAY [ 12.193s]
+Writing 'system_a'                                 OKAY [  2.066s]
+Finished. Total time: 14.347s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.6
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (257981 KB)                     OKAY [ 12.271s]
+Writing 'system_a'                                 OKAY [  2.067s]
+Finished. Total time: 14.453s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.7
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (257949 KB)                     OKAY [ 13.610s]
+Writing 'system_a'                                 OKAY [  2.074s]
+Finished. Total time: 15.893s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.8
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (243002 KB)                     OKAY [ 13.120s]
+Writing 'system_a'                                 OKAY [  3.115s]
+Finished. Total time: 16.620s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_a system.img_sparsechunk.9
+(bootloader) is-logical:system_a: not found
+Sending 'system_a' (254202 KB)                     OKAY [ 12.079s]
+Writing 'system_a'                                 OKAY [  2.176s]
+Finished. Total time: 14.474s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_b system_b.img_sparsechunk.0
+(bootloader) is-logical:system_b: not found
+Sending 'system_b' (257740 KB)                     OKAY [ 12.289s]
+Writing 'system_b'                                 OKAY [  2.578s]
+Finished. Total time: 14.937s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_b system_b.img_sparsechunk.1
+(bootloader) is-logical:system_b: not found
+Sending 'system_b' (257500 KB)                     OKAY [ 12.142s]
+Writing 'system_b'                                 OKAY [  2.049s]
+Finished. Total time: 14.232s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash system_b system_b.img_sparsechunk.2
+(bootloader) is-logical:system_b: not found
+Sending 'system_b' (128340 KB)                     OKAY [  6.235s]
+Writing 'system_b'                                 OKAY [  1.024s]
+Finished. Total time: 7.290s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash vendor_a vendor.img_sparsechunk.0
+(bootloader) is-logical:vendor_a: not found
+Sending 'vendor_a' (258224 KB)                     OKAY [ 12.229s]
+Writing 'vendor_a'                                 OKAY [  2.284s]
+Finished. Total time: 14.769s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash vendor_a vendor.img_sparsechunk.1
+(bootloader) is-logical:vendor_a: not found
+Sending 'vendor_a' (216936 KB)                     OKAY [ 10.358s]
+Writing 'vendor_a'                                 OKAY [  1.728s]
+Finished. Total time: 12.180s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash oem_a oem.img
+(bootloader) is-logical:oem_a: not found
+Sending 'oem_a' (96656 KB)                         OKAY [  4.683s]
+Writing 'oem_a'                                    OKAY [  0.826s]
+Finished. Total time: 5.539s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot flash oem_b oem_other.img
+(bootloader) is-logical:oem_b: not found
+Sending 'oem_b' (20192 KB)                         OKAY [  1.112s]
+Writing 'oem_b'                                    OKAY [  0.231s]
+Finished. Total time: 1.376s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot erase userdata
+Erasing 'userdata'                                 OKAY [  0.114s]
+Finished. Total time: 0.115s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot erase DDR
+Erasing 'DDR'                                      OKAY [  0.001s]
+Finished. Total time: 0.002s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot oem fb_mode_clear
+                                                   OKAY [  0.002s]
+Finished. Total time: 0.002s
+admin@planet-terror:~/Documents/platform-tools
+$ fastboot reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.151s
+admin@planet-terror:~/Documents/platform-tools
+$ cd home
+bash: cd: home: No such file or directory
+admin@planet-terror:~/Documents/platform-tools
+$ cd /home
+admin@planet-terror:/home
+$ cd
+admin@planet-terror:~
+$ 
